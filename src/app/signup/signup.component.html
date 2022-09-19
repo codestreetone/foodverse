@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-5 p-4 border border-3 rounded-3">
+                <h1 class="text-center"><i class="bi bi-signpost"></i> Sign up!</h1>
+                <form method="post" #dataSignup="ngForm" (ngSubmit)="data(dataSignup)">
+                    <div>
+                        <input type="text" placeholder="Enter first name" class="form-control" name="fname" required ngModel #dataFname="ngModel">
+                        <span class="error" *ngIf="dataFname.invalid && dataFname.touched">Please enter first name</span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Enter last name" class="form-control mt-3" name="lname" required ngModel #dataLname="ngModel">
+                        <span class="error" *ngIf="dataLname.invalid && dataLname.touched">Please enter last name</span>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Enter email id" class="form-control mt-3" name="eid" required ngModel #dataEid="ngModel">
+                        <span class="error" *ngIf="dataEid.invalid && dataEid.touched">Please enter email id</span>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Enter password" class="form-control mt-3" name="pid" minlength="8" maxlength="8" size="8" required ngModel #dataPid="ngModel">
+                        <span class="error" *ngIf="dataPid.invalid && dataPid.touched">Please enter a 8 digit password</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="mt-3" name="chid" required ngModel #dataChid="ngModel">&nbsp;Accept terms & conditions
+                        <div class="error" *ngIf="dataChid.invalid && dataChid.untouched">Please accept terms & conditions</div>
+                    </div>
+                    <div><input type="submit" value="Sign up" class="form-control mt-3" name="sigid" required #dataSubid></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

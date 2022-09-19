@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-5">
+                <div class="text-center title text-white text-shadow" id="myDiv">foodverse</div>
+                <form method="post">
+                    <input type="search" placeholder="serach your favourite dish" class="form-control mt-3 rounded-pill" name="srid">
+                </form>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-1"><a class="text-decoration-none" routerLink="">Indian</a></div>
+            <div class="col-1"><a class="text-decoration-none" routerLink="">Chinese</a></div>
+            <div class="col-1"><a class="text-decoration-none" routerLink="">Italian</a></div>
+            <div class="col-1"><a class="text-decoration-none" routerLink="">Mexican</a></div>
+        </div>
+        <div class="row mt-4 d-flex justify-content-center">
+            <div class="col-4 ">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img [src]="img1" class="d-block rounded" alt="pic1" style="height: 220px; width: 100%;">
+                        </div>
+                        <div class="carousel-item">
+                            <img [src]="img2" class="d-block rounded" alt="pic2" style="height: 220px; width: 100%;">
+                        </div>
+                        <div class="carousel-item">
+                            <img [src]="img3" class="d-block rounded" alt="pic3" style="height: 220px; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
